@@ -16,9 +16,9 @@ public class BuisnessContact extends Contact{
     }
 
     @Override
-    public void display() {
-        super.display();
-        System.out.println(getName()+ " phone numbers is "+ number);
+    public String toString(){
+        return "Name: " + this.getName() + "\nEmail: " + this.getEmail() + "\nPhone Number: " + this.getNumber() + "\n";
+
 
     }
 }

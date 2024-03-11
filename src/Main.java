@@ -1,13 +1,16 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
-//Joleyne Hernandez CSCI1660 02/27/24
+//Joleyne Hernandez CSCI1660 03/08/24
 public class Main {
     public static void main(String[] args) {
-        Contact contact1 = new Contact("klsd","dsgf");
+        ArrayList<Contact> Collection = new ArrayList<>();
+
+
+        Contact contact1 = new Contact("klsd", "dsgf");
         Contact contact2 = new Contact("John Bilovep", "JohnnyBi@gmail.com");
         BuisnessContact bContact1 = new BuisnessContact("Kaleb Chester", "kChester@gmail.com", "614-673-5643");
         Scanner input = new Scanner(System.in);
-
 
         System.out.println("What's your name");
         String contact = input.nextLine();
@@ -17,12 +20,16 @@ public class Main {
         String phoneNum = input.nextLine();
         BuisnessContact newPerson = new BuisnessContact(contact, userEmail, phoneNum);
 
-        newPerson.display();
 
-        contact1.display();
-        contact2.display();
-        bContact1.display();
+        Collection.add(contact1);
+        Collection.add(contact2);
+        Collection.add(bContact1);
+        Collection.add(newPerson);
 
+        System.out.println("\n-----------------Contact Information--------------------\n");
+        for (int i = 0; i < Collection.size(); i++) {
+            System.out.println(Collection.get(i));
 
+        }
     }
 }
